@@ -63,7 +63,7 @@ USER ${USER}
 
 COPY . ${WORK_DIR}/
 
-RUN sudo chown user:user-R ${WORK_DIR} && time buildozer android debug || echo "Fix build hello world" && /bin/true
+RUN sudo chown user:user -R ${WORK_DIR} && time buildozer android debug || echo "Fix build hello world" && /bin/true
 
 CMD tail -f /var/log/faillog
 
